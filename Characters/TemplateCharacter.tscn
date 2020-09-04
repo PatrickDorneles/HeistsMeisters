@@ -4,8 +4,8 @@
 [ext_resource path="res://Characters/TemplateCharacter.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 9.3963
-height = 26.2276
+radius = 12.6813
+height = 18.9135
 
 [sub_resource type="OccluderPolygon2D" id=2]
 cull_mode = 2
@@ -19,7 +19,7 @@ texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2( -2.02988, 0 )
+position = Vector2( -1, 0 )
 shape = SubResource( 1 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]

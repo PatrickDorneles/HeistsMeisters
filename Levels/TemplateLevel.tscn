@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Tiles/Tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Characters/TemplateCharacter.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Characters/NPCs/SecurityCamera.tscn" type="PackedScene" id=4]
 
 [node name="TemplateLevel" type="Node2D"]
 
@@ -18,4 +19,8 @@ position = Vector2( 187.116, -2.30731 )
 rotation = -2.42077
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+position = Vector2( -220.119, 134.141 )
 color = Color( 0.243137, 0.243137, 0.243137, 1 )
+
+[node name="SecurityCamera" parent="CanvasModulate" instance=ExtResource( 4 )]
+position = Vector2( -154.491, -109.515 )
