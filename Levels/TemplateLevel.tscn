@@ -1,36 +1,21 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Tiles/Tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Characters/TemplateCharacter.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Characters/NPCs/SecurityCamera.tscn" type="PackedScene" id=4]
 
 [node name="TemplateLevel" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
+collision_layer = 2
+collision_mask = 5
 format = 1
-tile_data = PoolIntArray( -196615, 1, 0, -196614, 1, 2, -196613, 1, 2, -196612, 1, 2, -196611, 1, 2, -196610, 1, 2, -196609, 1, 2, -262144, 1, 2, -262143, 1, 2, -262142, 1, 2, -262141, 1, 2, -262140, 1, 2, -262139, 1, 2, -262138, 1, 1, -131079, 1, 65538, -131078, 2, 0, -131077, 2, 0, -131076, 2, 0, -131075, 2, 0, -131074, 2, 0, -131073, 2, 0, -196608, 2, 0, -196607, 2, 0, -196606, 2, 0, -196605, 2, 0, -196604, 2, 0, -196603, 2, 0, -196602, 1, 65538, -65543, 1, 65538, -65542, 2, 0, -65541, 1, 65542, -65540, 1, 2, -65539, 1, 5, -65538, 2, 0, -65537, 2, 4, -131072, 2, 4, -131071, 2, 2, -131070, 2, 0, -131069, 1, 65542, -131068, 1, 1, -131067, 2, 0, -131066, 1, 65538, -7, 1, 65538, -6, 2, 0, -5, 2, 0, -4, 2, 0, -3, 2, 0, -2, 2, 0, -1, 2, 2, -65536, 2, 0, -65535, 2, 2, -65534, 2, 0, -65533, 2, 0, -65532, 1, 6, -65531, 2, 0, -65530, 1, 65538, 65529, 1, 65538, 65530, 2, 0, 65531, 2, 0, 65532, 2, 0, 65533, 2, 2, 65534, 2, 0, 65535, 2, 0, 0, 2, 0, 1, 2, 0, 2, 2, 0, 3, 2, 0, 4, 2, 0, 5, 2, 0, 6, 1, 65538, 131065, 1, 65538, 131066, 2, 0, 131067, 1, 196614, 131068, 2, 0, 131069, 2, 4, 131070, 2, 0, 131071, 2, 2, 65536, 2, 2, 65537, 2, 4, 65538, 2, 0, 65539, 1, 196614, 65540, 2, 0, 65541, 2, 0, 65542, 1, 65538, 196601, 1, 65538, 196602, 2, 0, 196603, 2, 0, 196604, 2, 0, 196605, 2, 0, 196606, 2, 0, 196607, 2, 0, 131072, 2, 0, 131073, 2, 0, 131074, 2, 0, 131075, 2, 0, 131076, 2, 0, 131077, 2, 0, 131078, 1, 65538, 262137, 1, 65536, 262138, 1, 2, 262139, 1, 2, 262140, 1, 2, 262141, 1, 2, 262142, 1, 2, 262143, 1, 2, 196608, 1, 2, 196609, 1, 2, 196610, 1, 2, 196611, 1, 2, 196612, 1, 2, 196613, 1, 2, 196614, 1, 65537 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 
-[node name="TemplateCharacter" parent="." instance=ExtResource( 3 )]
-position = Vector2( 187.116, -2.30731 )
-rotation = -2.42077
-
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-position = Vector2( -220.119, 134.141 )
 color = Color( 0.243137, 0.243137, 0.243137, 1 )
 
 [node name="Cameras" type="Node" parent="."]
 
-[node name="SecurityCamera" parent="Cameras" instance=ExtResource( 4 )]
-position = Vector2( -373.196, -45.3776 )
-
-[node name="SecurityCamera2" parent="Cameras" instance=ExtResource( 4 )]
-position = Vector2( -42.361, -193.132 )
-rotation = 1.5708
-
-[node name="SecurityCamera3" parent="Cameras" instance=ExtResource( 4 )]
-position = Vector2( 373.85, 34.9799 )
-rotation = 3.14159
+[node name="Guards" type="Node" parent="."]

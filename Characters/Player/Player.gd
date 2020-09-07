@@ -41,6 +41,3 @@ func move(move: float, max_move: float, axis):
 		motion.y = clamp(motion.y + move, min_clamp_value, max_clamp_value);
 
 
-func _input(event):
-	if Input.is_action_just_pressed("torch_toggle"):
-		$Torch.enabled = not $Torch.enabled;
