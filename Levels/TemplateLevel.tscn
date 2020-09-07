@@ -22,5 +22,15 @@ rotation = -2.42077
 position = Vector2( -220.119, 134.141 )
 color = Color( 0.243137, 0.243137, 0.243137, 1 )
 
-[node name="SecurityCamera" parent="CanvasModulate" instance=ExtResource( 4 )]
-position = Vector2( -154.491, -109.515 )
+[node name="Cameras" type="Node" parent="."]
+
+[node name="SecurityCamera" parent="Cameras" instance=ExtResource( 4 )]
+position = Vector2( -373.196, -45.3776 )
+
+[node name="SecurityCamera2" parent="Cameras" instance=ExtResource( 4 )]
+position = Vector2( -42.361, -193.132 )
+rotation = 1.5708
+
+[node name="SecurityCamera3" parent="Cameras" instance=ExtResource( 4 )]
+position = Vector2( 373.85, 34.9799 )
+rotation = 3.14159
