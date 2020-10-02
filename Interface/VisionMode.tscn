@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Interface/VisionMode.gd" type="Script" id=1]
+
+[node name="VisionMode" type="Node" groups=[
+"Interface",
+]]
+script = ExtResource( 1 )
+
+[node name="Modulate" type="CanvasModulate" parent="."]
+
+[node name="CooldownTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

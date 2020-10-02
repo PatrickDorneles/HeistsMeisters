@@ -1,6 +1,6 @@
-extends "res://Characters/TemplateCharacter.gd"
+class_name PlayerDetection extends TemplateCharacter
 
-const FOV_TOLERANCE = 17;
+const FOV_TOLERANCE = 17.5;
 const RED = Color(1,0.25,0.25);
 const WHITE = Color(1,1,1);
 const MAX_DETECTION_RANGE = 600;

@@ -1,11 +1,11 @@
-extends "res://Characters/TemplateCharacter.gd"
+extends TemplateCharacter
 
 var motion = Vector2()
 
-const SPRINTING_SPEED = SPEED * 1.5;
+const SPRINTING_SPEED = SPEED * 2.5;
 const MAX_SPRINTING_SPEED = MAX_SPEED * 2.5;
 
-enum MOVEMENT_AXIS { Y_AXIS, X_AXIS };
+enum MOVEMENT_AXIS { X_AXIS = 0, Y_AXIS = 1 };
 
 func _physics_process(delta):
 	update_movement();
@@ -31,7 +31,7 @@ func update_movement():
 	else:
 		motion.x = lerp(motion.x, 0, FRICTION);
 
-func move(move: float, max_move: float, axis):
+func move(move: float, max_move: float, axis: int):
 	var max_clamp_value = max_move if move > 0 else 0;
 	var min_clamp_value = 0 if move > 0 else max_move;
 	
@@ -40,4 +40,6 @@ func move(move: float, max_move: float, axis):
 	if axis == MOVEMENT_AXIS.Y_AXIS:
 		motion.y = clamp(motion.y + move, min_clamp_value, max_clamp_value);
 
-
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed('vision_mode_toggle'):
+		get_tree().call_group("Interface", "cycle_vision_mode");

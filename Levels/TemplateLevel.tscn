@@ -1,21 +1,39 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Tiles/Tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Tiles/Furniture.tres" type="TileSet" id=3]
 
 [node name="TemplateLevel" type="Node2D"]
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="Navigation2D" type="Navigation2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="Navigation2D"]
 tile_set = ExtResource( 1 )
 collision_layer = 2
 collision_mask = 5
 format = 1
 
-[node name="Player" parent="." instance=ExtResource( 2 )]
+[node name="Furniture" type="Node" parent="Navigation2D"]
 
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color( 0.243137, 0.243137, 0.243137, 1 )
+[node name="LowerFurniture" type="TileMap" parent="Navigation2D/Furniture"]
+tile_set = ExtResource( 3 )
+format = 1
+
+[node name="MiddleFurniture" type="TileMap" parent="Navigation2D/Furniture"]
+tile_set = ExtResource( 3 )
+format = 1
+
+[node name="UpperFurniture" type="TileMap" parent="Navigation2D/Furniture"]
+tile_set = ExtResource( 3 )
+format = 1
+
+[node name="Destinations" type="Node" parent="Navigation2D"]
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
 
 [node name="Cameras" type="Node" parent="."]
 
 [node name="Guards" type="Node" parent="."]
+
+[node name="Doors" type="Node" parent="."]
