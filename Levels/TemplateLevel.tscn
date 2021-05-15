@@ -38,3 +38,5 @@ format = 1
 [node name="Guards" type="Node" parent="."]
 
 [node name="Doors" type="Node" parent="."]
+
+[node name="LockedDoors" type="Node" parent="."]

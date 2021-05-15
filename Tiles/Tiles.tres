@@ -692,7 +692,7 @@ resource_name = "TileSheet"
 "shape": SubResource( 100 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
-1/z_index = 0
+1/z_index = 2
 2/name = "WoodenFloor"
 2/texture = ExtResource( 1 )
 2/tex_offset = Vector2( 0, 0 )

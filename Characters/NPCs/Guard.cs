@@ -16,7 +16,7 @@ public class Guard : PlayerDetection
 
     [Export()]
     private float _minimumDistanceToDestination = 5f;
-    
+
     [Export()]
     private float _walkSpeed = 0.5f;
 
@@ -24,24 +24,24 @@ public class Guard : PlayerDetection
     public override void _Ready()
     {
         base._Ready();
-        _navigation = (Navigation2D) GetTree().Root.FindNode("Navigation2D", true, false);
+        _navigation = (Navigation2D)GetTree().Root.FindNode("Navigation2D", true, false);
         _destinations = _navigation.GetNode<Node>("Destinations");
         _timer = GetNode<Timer>("Timer");
 
         GD.Randomize();
 
         _possibleDestinations = _destinations.GetChildren();
-        
+
         MakePath();
     }
 
     public override void _PhysicsProcess(float delta)
     {
         base._PhysicsProcess(delta);
-        
+
         Navigate();
     }
-    
+
     public void _OnTimerTimeout()
     {
         MakePath();
@@ -50,7 +50,7 @@ public class Guard : PlayerDetection
     private void MakePath()
     {
         var index = GD.Randi() % _possibleDestinations.Count;
-        var newDestination = (Position2D) _possibleDestinations[Convert.ToInt32(index)];
+        var newDestination = (Position2D)_possibleDestinations[Convert.ToInt32(index)];
 
         _path = _navigation.GetSimplePath(Position, newDestination.Position, false);
     }

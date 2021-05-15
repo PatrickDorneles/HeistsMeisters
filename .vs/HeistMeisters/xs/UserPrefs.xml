@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{1833782D-50D2-4E87-B1F2-C1EC39ED1054}|Play in Editor">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Objects/Doors/Door.cs">
+    <Files>
+      <File FileName="Objects/CombinationGenerator.cs" Line="14" Column="10" />
+      <File FileName="Interface/Numpad.cs" Line="15" Column="1" />
+      <File FileName="Objects/LockedDoor.cs" Line="26" Column="6" />
+      <File FileName="Objects/Doors/Door.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="HeistMeisters" expanded="True">
+            <Node name="HeistMeisters" expanded="True">
+              <Node name="Characters" expanded="True">
+                <Node name="NPCs" expanded="True" />
+              </Node>
+              <Node name="Interface" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.HeistMeisters PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

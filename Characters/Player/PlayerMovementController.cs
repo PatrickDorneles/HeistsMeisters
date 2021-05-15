@@ -1,5 +1,4 @@
 using Godot;
-using System;
 
 public class PlayerMovementController
 {
@@ -9,7 +8,7 @@ public class PlayerMovementController
     private float _friction;
 
     private const int SprintingSpeedMultiplier = 3;
-    
+
     public PlayerMovementController(int speed, int maxSpeed, float friction)
     {
         this._speed = speed;
@@ -25,7 +24,7 @@ public class PlayerMovementController
     public void Move(PlayerMovement playerMovement, bool isSprinting)
     {
         var speedMultiplier = isSprinting ? SprintingSpeedMultiplier : 1;
-        
+
         var baseSpeed = GetMovementBaseSpeed(playerMovement) * speedMultiplier;
         var maxMotionValue = GetMovementMaxMotionValue(playerMovement) * speedMultiplier;
         var minMotionValue = GetMovementMinMotionValue(playerMovement) * speedMultiplier;
@@ -47,7 +46,6 @@ public class PlayerMovementController
                 _motion.y = Mathf.Lerp(_motion.y, 0, _friction);
                 break;
         }
-        
     }
 
     private int GetMovementBaseSpeed(PlayerMovement playerMovement)
@@ -78,7 +76,7 @@ public class PlayerMovementController
                 return 0;
         }
     }
-    
+
     private int GetMovementMinMotionValue(PlayerMovement playerMovement)
     {
         switch (playerMovement)
